@@ -51,6 +51,7 @@ fetchRestaurantFromURL = (callback) => {
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
+  name.tabIndex = 0;
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
@@ -61,11 +62,15 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
+  const hours = document.getElementById('restaurant-hours');
+  hours.tabIndex = 0;
+  hours.setAttribute('aria-label', `Working hours table of ${restaurant.name}`)
 
   // fill operating hours
   if (restaurant.operating_hours) {
     fillRestaurantHoursHTML();
   }
+
   // fill reviews
   fillReviewsHTML();
 }
@@ -97,6 +102,8 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
+  // title.tabIndex = 0;
+  // title.setAttribute('aria-label', `Reviews of ${restaurant.name} restaurant`)
   container.appendChild(title);
 
   if (!reviews) {

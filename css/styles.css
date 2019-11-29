@@ -281,6 +281,19 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+.skip-link{
+  position: absolute;
+  top : -40px;
+  left : 0;
+  background:white;
+  Padding:8px;
+  z-index:100;
+}
+.skip-link:focus{
+  top : 0px;
+  background:white;
+}
+/* For Mobile Screen */
 @media screen and (max-width: 540px) {
   #restaurants-list li{
     width: 150px;
@@ -291,13 +304,12 @@ nav h1 a {
     width: 40%;
     min-height: 148px;
   }
- 
   #reviews-container{
     width: 80%;
   }
-  /* #restaurants-list li a {
-    padding: 0px;
-  } */
+   #map {
+    height: 180px;
+  }
 }
 @media screen and (max-width: 800px) {
   .inside #map-container{
