@@ -6,7 +6,7 @@ Restaurant Reviews is a static webpage that converted to mobile-ready web applic
 https://github.com/AmalAlqadhibi/Restaurant-Reviews
 2. Under the repository name, click Clone or download.
 3. Choose Download ZIP the unZIP the file. 
-4. Open the jasmine/spec/feedreader.js file to start editing the test suites.
+4. Open the index.html file file.
 
 ## Clone the repository
 1. On GitHub, navigate to the main page of the repository.The URL for repository https://github.com/AmalAlqadhibi/Restaurant-Reviews
